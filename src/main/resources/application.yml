@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5444/personal-organization-planner
+    username: postgres
+    password: postgres
