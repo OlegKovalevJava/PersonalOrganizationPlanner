@@ -1,12 +1,16 @@
 package personal.opk.personalorganizationplanner.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
+@Setter
+@Getter
 @Table(name = "project")
 public class ProjectEntity {
     @Id
@@ -20,36 +24,4 @@ public class ProjectEntity {
 
     @OneToMany
     private List<TaskStateEntity> taskStates;
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Instant getCreateAt() {
-        return createAt;
-    }
-
-    public void setCreateAt(Instant createAt) {
-        this.createAt = createAt;
-    }
-
-    public List<TaskStateEntity> getTaskStates() {
-        return taskStates;
-    }
-
-    public void setTaskStates(List<TaskStateEntity> taskStates) {
-        this.taskStates = taskStates;
-    }
 }
