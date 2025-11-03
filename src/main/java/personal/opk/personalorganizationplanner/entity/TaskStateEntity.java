@@ -1,11 +1,18 @@
 package personal.opk.personalorganizationplanner.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Setter
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "task_state")
 public class TaskStateEntity {
@@ -21,5 +28,5 @@ public class TaskStateEntity {
     private Instant createdAt = Instant.now();
 
     @OneToMany
-    private List<TaskEntity> tasks;
+    private List<TaskEntity> tasks = new ArrayList<>();
 }

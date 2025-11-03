@@ -1,10 +1,16 @@
 package personal.opk.personalorganizationplanner.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.Instant;
 import java.util.UUID;
 
+@Setter
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "task")
 public class TaskEntity {
