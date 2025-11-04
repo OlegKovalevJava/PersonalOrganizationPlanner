@@ -2,7 +2,6 @@ package personal.opk.personalorganizationplanner.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.Instant;
 import java.util.UUID;
 
@@ -14,6 +13,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "task")
 public class TaskEntity {
+
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
