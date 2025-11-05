@@ -23,8 +23,10 @@ public class ProjectEntity {
     @Column(unique = true)
     private String name;
 
+    @Builder.Default
     private Instant createAt = Instant.now();
 
+    @Builder.Default
     @OneToMany
     private List<TaskStateEntity> taskStates = new ArrayList<>();
 }

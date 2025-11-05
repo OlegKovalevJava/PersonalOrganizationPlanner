@@ -21,6 +21,7 @@ public class TaskEntity {
     @Column(unique = true)
     private String name;
 
+    @Builder.Default
     private Instant createdAt = Instant.now();
 
     private String description;
