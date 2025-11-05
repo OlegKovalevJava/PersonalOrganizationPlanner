@@ -25,8 +25,10 @@ public class TaskStateEntity {
 
     private Long ordinal;
 
+    @Builder.Default
     private Instant createdAt = Instant.now();
 
+    @Builder.Default
     @OneToMany
     private List<TaskEntity> tasks = new ArrayList<>();
 }
