@@ -3,3 +3,7 @@ spring:
     url: jdbc:postgresql://localhost:5444/personal-organization-planner
     username: postgres
     password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
